@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "../../styles/PokemonPage.module.css";
 
 const MyPokemonSSG = ({ pokemons }) => {
   return (
@@ -11,7 +12,7 @@ const MyPokemonSSG = ({ pokemons }) => {
             key={pokemon.name}
             passHref
           >
-            <li>{pokemon.name}</li>
+            <li className={styles.link}>{pokemon.name}</li>
           </Link>
         ))}
       </ul>
