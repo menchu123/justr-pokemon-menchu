@@ -1,10 +1,19 @@
+import Link from "next/link";
+import styles from "../../styles/PokemonPage.module.css";
+
 const MyPokemonSSG = ({ pokemons }) => {
   return (
     <>
       <h1>My Pokemon SSG</h1>
       <ul>
         {pokemons.map((pokemon) => (
-          <li key={pokemon.name}>{pokemon.name}</li>
+          <Link
+            href={`/mypokemon-ssg/${pokemon.id}`}
+            key={pokemon.name}
+            passHref
+          >
+            <li className={styles.link}>{pokemon.name}</li>
+          </Link>
         ))}
       </ul>
     </>
