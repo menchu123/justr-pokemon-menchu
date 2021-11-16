@@ -19,13 +19,23 @@ export default function Home() {
           </Link>
         </li>
         <li className={styles.description}>
-          <Link href="/about">
-            <a>About Us</a>
+          <Link href="/pokemon">
+            <a>Pokémon</a>
           </Link>
         </li>
         <li className={styles.description}>
-          <Link href="/blog/hello-world">
-            <a>Blog Post</a>
+          <Link href="/mypokemon-ssr">
+            <a>My Pokémon SSR</a>
+          </Link>
+        </li>
+        <li className={styles.description}>
+          <Link href="/mypokemon-ssg">
+            <a>My Pokémon SSG</a>
+          </Link>
+        </li>
+        <li className={styles.description}>
+          <Link href="/mypokemon-isr">
+            <a>My Pokémon ISR</a>
           </Link>
         </li>
       </ul>
