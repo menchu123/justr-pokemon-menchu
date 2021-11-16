@@ -1,7 +1,7 @@
-const MyPokemonSSG = ({ pokemons }) => {
+const MyPokemonISR = ({ pokemons }) => {
   return (
     <>
-      <h1>My Pokemon SSG</h1>
+      <h1>My Pokemon ISR</h1>
       <ul>
         {pokemons.map((pokemon) => (
           <li key={pokemon.name}>{pokemon.name}</li>
@@ -19,7 +19,8 @@ export async function getStaticProps() {
     props: {
       pokemons,
     },
+    revalidate: 20,
   };
 }
 
-export default MyPokemonSSG;
+export default MyPokemonISR;
