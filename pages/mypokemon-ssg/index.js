@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/PokemonPage.module.css";
+import styles from "../../styles/PokemonPages.module.css";
 
 const MyPokemonSSG = ({ pokemons }) => {
   return (
