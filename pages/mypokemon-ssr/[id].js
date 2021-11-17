@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
-const PokemonPage = ({ pokemon }) => {
-  return pokemon ? (
+const PokemonPage = ({ pokemon }) =>
+  pokemon ? (
     <>
       <h1>{pokemon.name}</h1>
       <img
@@ -13,7 +13,6 @@ const PokemonPage = ({ pokemon }) => {
   ) : (
     ""
   );
-};
 
 export const getServerSideProps = async ({ params: { id } }) => {
   const response = await fetch(
