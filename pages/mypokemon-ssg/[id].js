@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
-const PokemonPage = ({ pokemon }) => {
-  return pokemon ? (
+const PokemonPage = ({ pokemon }) =>
+  pokemon ? (
     <>
       <h1>{pokemon.name}</h1>
       <img
@@ -13,13 +13,12 @@ const PokemonPage = ({ pokemon }) => {
   ) : (
     ""
   );
-};
 
 export const getStaticPaths = async () => {
   const response = await fetch("https://pokeapi-menchu.herokuapp.com/pokemon");
   const pokemons = await response.json();
   const paths = pokemons.map((pokemon) => ({
-    params: { id: "" + pokemon.id },
+    params: { id: `${pokemon.id}` },
   }));
   return { paths, fallback: true };
 };

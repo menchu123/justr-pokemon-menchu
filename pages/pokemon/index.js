@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
 const Pokemon = () => {
@@ -10,8 +9,8 @@ const Pokemon = () => {
         "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
       );
       const pokemonData = await response.json();
-      const pokemons = pokemonData.results;
-      setPokemons(pokemons);
+      const pokemonList = pokemonData.results;
+      setPokemons(pokemonList);
     })();
   }, [setPokemons]);
 
